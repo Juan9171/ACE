@@ -1,0 +1,174 @@
+html { 
+  background-color: #F48F42;
+  background-size: cover;
+}
+
+.BarraSuperior{
+  height: 150px;
+  background: #000;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.BarraTitulo{
+  height: 150px;
+  background: #F48F42;
+  top: 150px;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.boton {
+  font-size: 28px;
+  background-color: #000000;
+  border: none;
+  border-top: 1px solid #000000;
+  color: white;
+  font-family:sans-serif;
+  height: 150px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.ubicBoton{
+  height: 150px;
+  width: 337px;
+  background: #000;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.boton:active {
+  box-shadow: inset 0px 4px 16px #FFFFFF;
+  transform: translateY(1px);
+}
+
+.boton:hover {
+  background: #767575;
+  color: white;
+  text-shadow: 1px 1px 6px #fff;
+  transition: all 0.2s ease;
+}
+
+.contenedorLinea{
+  background: #F48F42;
+  top: 300px;
+  left: 10%;
+  right: 88%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 28px;
+}
+
+.contenedorVentas{
+  background: #F48F42;
+  top: 300px;
+  left: 12%;
+  right: 45%;
+  position: absolute;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorEstado{
+  background: #F48F42;
+  top: 300px;
+  left: 55%;
+  right: 10%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 28px;
+}
+
+table.tablaVentas {
+  table-layout: fixed;
+  width: 75%;
+  border-collapse: collapse;
+  border: none;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+table.tablaEstado{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  font-family: sans-serif;
+  background-color: white;
+  cursor: pointer;
+}
+
+th,td.tablaEstado{
+  padding: 20px;
+}
+
+th,td.tablaVentas{
+  padding: 20px;
+}
+
+.tablaEstado thead{
+  background-color: #FFB02E;
+  color: white;
+}
+
+.tablaVentas thead{
+  border-bottom: solid 3px black ;
+  color: white;
+}
+
+.tablaEstado tr:nth-child(even){
+  background-color: #FFB02E;
+}
+
+.tablaEstado tr:hover{
+  background-color: #FFD082;
+  color: white;
+}
+
+.tablaVentas tr:hover{
+  background-color: #FFD082;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
