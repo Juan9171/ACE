@@ -1,2 +1,1 @@
-Hola mi nombre es Juan Pablo Sandoval R.
-Esta rama es creada con el fin de practicar los comandos de GIT
+Hola mi nombre es myriam este es un nuevo cambio con comandos de git.:
