@@ -1,2 +1,2 @@
-HOLA SOY MYRIAM J. V. R.
-ESTO ES UN CAMBIO PARA PRACTICAR LOS COMANDOS EN GIT Y DEL REPOSITORIO
+Hola mi nombre es Juan Pablo Sandoval R.
+Esta rama es creada con el fin de practicar los comandos de GIT
