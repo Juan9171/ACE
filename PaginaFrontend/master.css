@@ -180,3 +180,64 @@ body{
 .registrar-box a:hover {
   color: #F1DABF;
 }
+
+.recuperar-box {
+  width: 320px;
+  height: 420px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #000500;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  backdrop-filter: blur(10px) ;
+  box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+}
+
+.recuperar-box h1 {
+  margin: 0;
+  padding: 10px 10px 20px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.recuperar-box label {
+  margin: 0;
+  padding: 10px 10px 10px;
+  font-weight: bold;
+  display:flow-root;
+  font-size: 14px;
+}
+
+.recuperar-box input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 0 10px;
+}
+.recuperar-box input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #000500;
+  background: #FFFBFF;
+  outline: none;
+  height: 20px;
+  color: #000500;
+  font-size: 19px;
+}
+
+.recuperar-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #92817A;
+  color: #FFFBFF;
+  font-size: 19px;
+  border-radius: 20px;
+}
+
+.recuperar-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #F1DABF;
+  color: #000500;
+}
