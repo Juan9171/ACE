@@ -324,8 +324,8 @@ ul, ol{
   height: 3px;
   background-color: gray;
   top: 280px;
-  left: 35%;
-  right: 35%;
+  left: 25%;
+  right: 25%;
   position: absolute;
   text-align: center;
   display: flex;
@@ -349,16 +349,7 @@ table.tablaBusqueda{
 
 .contenedorDeBusqueda1{
   height: 60px;
-  width: 500px;
-  background-color: white;
-  position: relative;
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.contenedorDeBusqueda2{
-  height: 180px;
+  width: 400px;
   background-color: white;
   position: relative;
   text-align: center;

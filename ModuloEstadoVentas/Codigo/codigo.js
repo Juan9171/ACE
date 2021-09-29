@@ -12,7 +12,26 @@ function verificarRepetido(id) {
     return posicion;
 }
 
+function obtenerEstado(){   
+    var estado = document.getElementById("Estado");
+    switch (estado.value) {
+        case "1":
+            return "En proceso"
+        case "2":
+            return "Entregada"
+        case "3":
+            return "Cancelada"
+    }
+}
 
+function InsertarFila() {
+    var tbl = document.getElementById("tabladeHistorial");
+    var newRow = tbl.insertRow(-1);
+    var newCell = newRow.insertCell(-1);
+    var newText = document.createTextNode('Nueva fila superior');
+    newCell.appendChild(newText);
+
+}
 
 function actualizar() {
     var id1 = document.getElementById("numeroID");
@@ -35,16 +54,8 @@ function actualizar() {
     var nomV1 = document.getElementById("NOMVENDE");
     var nomV = eval(nomV1.value);
 
-    var estado = document.getElementById("Estado");
-
-    switch (estado.value) {
-        case "1":
-            var estadoNombre = "En progreso"
-        case "2":
-            var estadoNombre = "Entregada"
-        case "3":
-            var estadoNombre = "Cancelada"
-    }
+    
+    estadoNombre=obtenerEstado();
 
     var vect = [ID, valtot, idf, cant, priceU, fecha, DOCIDE, nomC, nomV, estadoNombre];
     var ind = verificarRepetido(vect[0]);
@@ -53,6 +64,5 @@ function actualizar() {
     } else {
         matriz[ind] = vect;
     }
-    window.alert(matriz[0])
-
+    InsertarFila();
 }
