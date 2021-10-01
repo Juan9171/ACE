@@ -1,9 +1,7 @@
+var cuerpoTabla =document.getElementById("ventas-tabla");
+var tablaLlena="";
 
-function InsertarFila() {
-    var tbl = document.getElementById("tabladeHistorial");
-    var newRow = tbl.insertRow(-1);
-    var newCell = newRow.insertCell(-1);
-    var newText = document.createTextNode('Nueva fila superior');
-    newCell.appendChild(newText);
-
+for (var i =0; i <tabla.length; i++){
+    tablaLlena+= "<tr><td>"+tabla[i].ID+"</td><td>"+tabla[i].VALORTOTAL+"</td><td>"+tabla[i].IDENTIFICADOR+"</td><td>"+tabla[i].CANTIDAD+"</td><td>"+tabla[i].PRECIOUNITARIO+"</td><td>"+tabla[i].FECHADEVENTA+"</td><td>"+tabla[i].DOCUMENTODEIDENTIFICACION+"</td><td>"+tabla[i].NOMBREDELCLIENTE+"</td><td>"+tabla[i].VENDEDORENCARGADO+"</td><td>"+tabla[i].ESTADODEVENTA+"</td></tr>"
 }
+//cuerpoTabla.innerHTML = tablaLlena;

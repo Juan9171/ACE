@@ -230,6 +230,34 @@ ul, ol{
   font-weight:lighter;
 }
 
+.contenedorROL1{
+  background: #F1DABF;
+  top: 300px;
+  left: 10%;
+  right: 60%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
+.contenedorROL2{
+  background: #F1DABF;
+  top: 300px;
+  left: 60%;
+  right: 10%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
 .botonActualizar{
   position: absolute;
   font-size: 19px;
@@ -238,8 +266,8 @@ ul, ol{
   border: none;
   color: white;
   font-family:sans-serif;
-  height: 30px;
-  width: 100px;
+  height: 60px;
+  width: 150px;
   cursor: pointer;
   display: inline-block;
   top: 110%;
@@ -255,9 +283,10 @@ ul, ol{
   transform: translateY(2px);
 }
 
-.contenedorEditor1 input{
-  width: 150px;
-  height: 25px;
+
+.contenedorEditor2 input{
+  width: 200px;
+  height: 40px;
   padding: 0 20px;
   font-size: 19px;
   color: #000;
@@ -270,9 +299,9 @@ ul, ol{
   align-items: center;
 }
 
-.contenedorEditor2 input{
-  width: 150px;
-  height: 25px;
+.contenedorEditor1 input{
+  width: 200px;
+  height: 40px;
   padding: 0 20px;
   font-size: 19px;
   color: #000;
@@ -286,14 +315,27 @@ ul, ol{
 }
 
 .contenedorEditor2 select{
-  width: 193px;
-  height: 25px;
+  width: 240px;
+  height: 40px;
   padding: 0 20px;
   font-size: 19px;
   color: #000;
   outline: none;
   border: 1px solid silver;
-  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorEditor1 select{
+  width: 240px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 19px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
@@ -386,6 +428,16 @@ a{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.contenedorDeEditarRol{
+  height: 40px;
+  width: 300px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 

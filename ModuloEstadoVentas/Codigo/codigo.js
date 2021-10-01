@@ -1,9 +1,11 @@
-var matriz = [];
+let tabla = [
+    {ID: 12345, VALORTOTAL: 12345, IDENTIFICADOR: 12345, CANTIDAD: 1, PRECIOUNITARIO: 12354, FECHADEVENTA:"17/08/2010", DOCUMENTODEIDENTIFICACION: 12345, NOMBREDELCLIENTE: "Juan", VENDEDORENCARGADO: "Pedro", ESTADODEVENTA: "En proceso"}
+];
 
 function verificarRepetido(id) {
-    var posicion = matriz.length;
-    for (var i = 0; i < matriz.length; i++) {
-        if (id == matriz[i][0]) {
+    var posicion = tabla.length;
+    for (var i = 0; i < tabla.length; i++) {
+        if (id == tabla[i].ID) {
             posicion = i;
             return posicion;
 
@@ -24,15 +26,6 @@ function obtenerEstado(){
     }
 }
 
-function InsertarFila() {
-    var tbl = document.getElementById("tabladeHistorial");
-    var newRow = tbl.insertRow(-1);
-    var newCell = newRow.insertCell(-1);
-    var newText = document.createTextNode('Nueva fila superior');
-    newCell.appendChild(newText);
-
-}
-
 function actualizar() {
     var id1 = document.getElementById("numeroID");
     var ID = eval(id1.value);
@@ -46,7 +39,7 @@ function actualizar() {
     var priceU = eval(pu.value);
     var fecha1 = document.getElementById("FECHAVENTA");
     var date = new Date(fecha1)
-    var fecha = date.toString
+    var fechax = date.toString
     var doci = document.getElementById("DOCIDENTIFI");
     var DOCIDE = eval(doci.value);
     var nomC1 = document.getElementById("NOMBRECLIENTE");
@@ -54,15 +47,15 @@ function actualizar() {
     var nomV1 = document.getElementById("NOMVENDE");
     var nomV = eval(nomV1.value);
 
-    
     estadoNombre=obtenerEstado();
 
-    var vect = [ID, valtot, idf, cant, priceU, fecha, DOCIDE, nomC, nomV, estadoNombre];
-    var ind = verificarRepetido(vect[0]);
-    if (ind == matriz.length) {
-        matriz.push(vect)
+    var ind = verificarRepetido(ID);
+    if (ind == tabla.length) {
+        var nuevaVenta ={ID: ID, VALORTOTAL: valtot, IDENTIFICADOR: idf, CANTIDAD: cant, PRECIOUNITARIO: priceU, FECHADEVENTA: fechax, DOCUMENTODEIDENTIFICACION: DOCIDE, NOMBREDELCLIENTE: nomC, VENDEDORENCARGADO: nomV, ESTADODEVENTA: estadoNombre}
+        tabla.push(nuevaVenta)
     } else {
-        matriz[ind] = vect;
+        var nuevaVenta ={ID: ID, VALORTOTAL: valtot, IDENTIFICADOR: idf, CANTIDAD: cant, PRECIOUNITARIO: priceU, FECHADEVENTA: fechax, DOCUMENTODEIDENTIFICACION: DOCIDE, NOMBREDELCLIENTE: nomC, VENDEDORENCARGADO: nomV, ESTADODEVENTA: estadoNombre}
+        tabla[ind] = nuevaVenta;
     }
-    InsertarFila();
 }
+

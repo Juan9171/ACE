@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Modulo de busqueda de ventas</title>
+    <title>Modulo de registro de ventas</title>
     <link href="Estilos.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <div class="buscar">
+        <a href="rolesyEstadoLista.html">
+            <img src="Imagenes/1762581.png" ; width="50px" ; height="50px" title="Editar y actualizar">
+        </a>
+    </div>
+
     <div class="BarraSuperior">
         <div class="ubicBoton">
             <li>
@@ -51,124 +56,113 @@
 
 
     <div class="BarraTitulo">
-        <img src="Imagenes/3665416.png" ; width="50px" ; height="50px">
-        VENTA
+        <img src="Imagenes/1608401.png" ; width="50px" ; height="50px">
+        HISTORIAL DE ESTADO DE VENTA
     </div>
 
 
-    <div class="linea">
+    <div class="contenedorEditor1">
+        <table>
+            <tr>
+                <th>
+                    NOMBRE DEL EMPLEADO
+                </th>
+
+                <th>
+                    ROL
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" placeholder="Ingresar datos">
+                </th>
+
+                <th>
+                    <select>
+                        <option value="1">Administrador</option>
+                        <option value="2">Vendedor</option>
+                        <option value="3">Domiciliario</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" placeholder="Ingresar datos">
+                </th>
+
+                <th>
+                    <select>
+                        <option value="1">Administrador</option>
+                        <option value="2">Vendedor</option>
+                        <option value="3">Domiciliario</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" placeholder="Ingresar datos">
+                </th>
+
+                <th>
+                    <select>
+                        <option value="1">Administrador</option>
+                        <option value="2">Vendedor</option>
+                        <option value="3">Domiciliario</option>
+                    </select>
+                </th>
+            </tr>
+            
+        </table>
     </div>
 
+    <div class="contenedorEditor2">
+        <table>
+            <tr>
+                <th>
+                    NOMBRE DEL USUARIO
+                </th>
 
-    <div class="ListaroVisualizar">
-        <img src="Imagenes/1762581.png" ; width="50px" ; height="50px" title="Listar">
-    </div>
+                <th>
+                    ESTADO
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" placeholder="Ingresar datos">
+                </th>
 
+                <th>
+                    <select>
+                        <option value="1">Normal</option>
+                        <option value="2">En deuda</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="text" placeholder="Ingresar datos">
+                </th>
 
-    <div class="contenedorBusqueda">
-        <table class="tablaBusqueda">
-            <tr>
                 <th>
-                    <li>
-                        ID
-                    </li>
-                </th>
-                <th>
-                    <li>
-                        DOCUMENTO DE IDENTIFICACION
-                    </li>
+                    <select>
+                        <option value="1">Normal</option>
+                        <option value="2">En deuda</option>
+                    </select>
                 </th>
             </tr>
+            <tr>
+                <th>
+                    <input type="text" placeholder="Ingresar datos">
+                </th>
 
-            <tr>
                 <th>
-                    <input type="text" placeholder="Ingresar ID" required>
-                </th>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-            </tr>
-
-            <tr>
-                <th>
-                    <li>
-                        VALOR TOTAL
-                    </li>
-                </th>
-                <th>
-                    <li>
-                        NOMBRE DEL CLIENTE
-                    </li>
+                    <select>
+                        <option value="1">Normal</option>
+                        <option value="2">En deuda</option>
+                    </select>
                 </th>
             </tr>
-            <tr>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <li>
-                        IDENTIFICADOR
-                    </li>
-                </th>
-                <th>
-                    <li>
-                        VENDEDOR ENCARGADO
-                    </li>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <li>
-                        CANTIDAD
-                    </li>
-                </th>
-                <th>
-                    <li>
-                        ESTADO DE VENTA
-                    </li>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <li>
-                        PRECIO UNITARIO
-                    </li>
-                </th>
-                <th>
-                    <li>
-                        FECHA DE VENTA
-                    </li>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-                <th>
-                    <div class="contenedorDeBusqueda1"></div>
-                </th>
-            </tr>
+            
         </table>
     </div>
 </body>
