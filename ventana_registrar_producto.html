@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link href="Styles.css" rel="stylesheet" type="text/css" />
+   
+
+</head>
+<body class="body">
+    <div class="cont1">
+        <div class="barraMenu2">
+            <div class="dropdown">
+                  <button class="dropbtn" >Administrador de ventas</button>
+                  <div class="dropdown-content">
+                    <a href="#">Registro</a>
+                    <a href="#">Historial de ventas</a>
+                  </div>
+            </div>
+            <div class="dropdown">
+                  <button  class="dropbtn">Administrador de productos</button>
+                  <div class="dropdown-content">
+                    <a href="ventana_registrar_producto.html">Registro</a>
+                    <a href="ventanaInicio.html">Historial de productos</a>
+                  </div>
+            </div>
+            
+            <button class="button button3">Gestion de usuarios/roles</button>
+            
+        </div>
+
+        </div>
+
+        <div class="iconoVisualizar"><img src="./Iconos/registrar50px.png" ></div>
+        <hr class="hrVentanaRegistrar">
+             <h1 class="h12">REGISTRO DE PRODUCTO</h1>
+        </hr>
+        <div class="posicionFormulario">    
+        
+        <form id="nuevo-producto">
+            
+            <label for="Idtxt"class="fontEncabezados">ID:</label><br>
+            <input type="text" id="Idtxt" name="Idtxt" size="30" autocomplete="off" placeholder="Ingrese el ID"><br>
+            <label for="valorUnitxt"class="fontEncabezados">VALOR UNITARIO:</label><br>
+            <input type="text" id="valorUnitxt" name="lname" autocomplete="off" placeholder="$"><br>
+            <label for="txtestado" class="fontEncabezados">ESTADO:</label><br>
+            <select  name="lname"id="txtestado"><br>
+                <option value="disponible">disponible</option>
+                <option value="no disponible">no disponible</option>
+              </select><br>
+            <label for="descriptxt" class="fontEncabezados">DESCRIPCION:</label><br>
+            <textarea id="descriptxt" name="descripcion" rows="10"cols="160" >Escribe aquí la descripcíon del producto.</textarea>
+        </div>
+        <div class="posicionBtnGuardar">
+            <button type="button" class="btnGuardar button3" id="btnGuardarProduc">Guardar</button>
+        </div>
+        <div class="posicionBtnCancelar">
+            <button class="btnCancel cancel" type="submit">Cancelar</button>
+        </div>
+      </form>
+
+      <script src="javascript.js"></script>
+      <script src="logic.js"></script>  
+     </body>   
+</html>

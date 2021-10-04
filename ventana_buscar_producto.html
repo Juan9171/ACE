@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body">
+    
+    <div class="cont1">
+        <div class="barraMenu2">
+            <div class="dropdown">
+                  <button class="dropbtn" >Administrador de ventas</button>
+                  <div class="dropdown-content">
+                    <a href="#">Registro</a>
+                    <a href="#">Historial de ventas</a>
+                  </div>
+            </div>
+            <div class="dropdown">
+                  <button class="dropbtn">Administrador de productos</button>
+                  <div class="dropdown-content">
+                    <a href="ventana_registrar_producto.html">Registro</a>
+                    <a href="ventanaInicio.html">Historial de  productos</a>
+                  </div>
+            </div>
+            
+            <button class="button button3">Gestion de usuarios/roles</button>
+            
+        </div>
+        
+    </div>
+    <div class="contButtonBusqueda"><img src="./Iconos/busqueda50px.png" ></div>
+    <hr class="hrBusqueda">
+        <h1 class="h1">PRODUCTO</h1>
+    </hr>
+    <div class="divContenedorButtonVisualizar">
+       
+    <button class="btnV visualizar" title="Visualizar historial de productos">
+        <img src="./Iconos/visualizar50px.png" >
+    </button>
+        
+    </div>
+
+    <div class="divContenedorButtonActualizar">
+        
+        <button class="btnV visualizar" title="Actualizar informacion del producto">
+                <img src="./Iconos/actualizar50px.png" >
+        </button>
+        
+    </div>
+    <div class="divContenedorButtonEliminar">
+       
+        <button class="btnV visualizar" title="Eliminar producto">
+             <img src="./Iconos/eliminar50px.png" >
+        </button>
+        
+    </div>
+     
+    <div class="divContenedorFormulario">    
+        <form action="/ventana_buscar_producto.html" method="GET">
+            
+            <label for="fname"class="fontEncabezados">ID:</label><br><br>
+            <input type="text" id="fname" name="fname" size="67" readonly  ><br><br>
+            <label for="lname"class="fontEncabezados">VALOR UNITARIO:</label><br><br>
+            <input type="text" id="lname" name="lname"size="67" readonly><br><br>
+            <label for="lname" class="fontEncabezados">ESTADO:</label><br><br>
+            <input type="text" id="lname" name="lname" size="67" readonly><br><br>
+            <label for="lname" class="fontEncabezados">DESCRIPCION:</label><br><br>
+            <textarea name="descripcion" rows="10"cols="67"readonly></textarea>
+          </form>
+        </div>  
+       
+    
+</body>
+</html>
