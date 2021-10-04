@@ -5,100 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-          top: 300px;
-          position: absolute;
-        }
-        
-        tr {
-          border-bottom: 1px solid #ddd;
-        }
-        .button {
-            background-color: black;
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 10px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-        }
-        .button1 {
-            background-color:black;
-            color:white;
-            
-}
-
-        .button1:hover {
-            background-color: #555555;
-            color: white;
-}
-        .button2 {
-            background-color:black;
-            color:white;
-            
-}
-
-        .button2:hover {
-            background-color: #555555;
-            color: white;
-}
-        .button3 {
-            background-color:black;
-            color:white;
-            
-}
-
-        .button3:hover {
-            background-color: #555555;
-            color: white;
-}
-        .button4 {
-            background-color:black;
-            color:white;
-            
-}
-
-        .button4:hover {
-            background-color: #555555;
-            color: white;
-}
-
-    </style>
-</head>
-<body>
-    <div style="background-color:black;color:white;padding: 50px;">
-        <div style="top: 25px;position: absolute;width: 100%; text-align: center;">
-
-            <button class="button button1" >Administrador de ventas</button>
-            <button class="button button2">Registro y estado de venta</button>
-            <button class="button button3">Gestion de usuarios y roles</button>
-            <button class="button button4">Gestion de Vendedores</button>
-        </div>
-    </div>
-    <h1 style="top: 180px;position: absolute;width: 100%; text-align: center;">Historial de listado de ventas</h1>
-    <table>
-        <tr>
-          <th>Identificador unico de venta</th>
-          <th>Descripcion</th>
-          <th>Fecha inicial</th>
-          <th>Fecha futura de pago</th>
-          <th>Responsable de la venta</th> 
-        </tr>
-        <tr>
-            <td>23</td>
-            <td>balon de caucho</td>
-            <td>12/03/21</td>
-            <td>12/03/30</td>
-            <td>Carlos Augusto Ramirez</td>
-        </tr>
-    </tAble>
     
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body">
+    <div class="cont1">
+        <div class="barraMenu2">
+            <div class="dropdown">
+                  <button class="dropbtn" >Administrador de ventas</button>
+                  <div class="dropdown-content">
+                    <a href="#">Registro</a>
+                    <a href="#">Historial de ventas</a>
+                  </div>
+            </div>
+            <div class="dropdown">
+                  <button class="dropbtn">Administrador de productos</button>
+                  <div class="dropdown-content">
+                    <a href="ventana_registrar_producto.html">Registro</a>
+                    <a href="ventanaInicio.html">Historial de productos</a>
+                  </div>
+            </div>
+            
+            <button class="button button3">Gestion de usuarios/roles</button>
+            
+        </div>
+        
+    </div>
+    
+    <div class="contButtonVisualizar" ><img src="./Iconos/visualizar50px.png" ></div>
+    <h1 class="h1">Listado de productos</h1>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <form action="" class="form">
+        <input type="search" placeholder="Search here ..." title="Buscar" id="btnBuscar" class="input">
+        <i class="fa fa-search"></i>
+    </form>
+
+    <div id="tabla-producto" >
+    <table class="table"id="producTable">
+        
+            <tr class="tr">
+            <th class="th">Identificador unico de venta</th>
+            <th class="th">Valor Unitario</th>
+            <th class="th">Estado</th>
+            <th class="th">Descripcion</th>
+
+            </tr>
+        <tr class="tr">
+            <td class="td">23</td>
+            <td class="td">balon de caucho</td>
+            <td class="td">12/03/21</td>
+            <td class="td">12/03/30</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">23</td>
+            <td class="td">balon de caucho</td>
+            <td class="td">12/03/21</td>
+            <td class="td">12/03/30</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">23</td>
+            <td class="td">balon de caucho</td>
+            <td class="td">12/03/21</td>
+            <td class="td">12/03/30</td>
+        </tr>
+               
+       
+    </table>
+   
+    </div>
+    <script src="javascript.js"></script>
+    <script src="logic.js"></script>  
+   
 </body>
 </html>
