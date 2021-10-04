@@ -5,130 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-         background-color: #f1dabf;
-       }
-      
-       th{
-         text-align: center;
-         padding: 12px;
-         font-size: 19px;
-         font-family: sans-serif;  
-       }
-              
-       td {
-         /*border-bottom: 1px solid #ddd;*/
-         text-align: left;
-         padding: 8px;
-         font-family: Arial;
-         font-size: 15px;
-         text-align: center;
-        
-         
-       }
-       tr:nth-child(even) {
-           background-color: #362417;
-           opacity: 0.9;
-           color: white;
-       }
-       
-       .button {
-           background-color: black;
-           border: none;
-           color: white;
-           padding: 16px 32px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           font-size: 16px;
-           margin: 4px 2px;
-           transition-duration: 0.4s;
-           cursor: pointer;
-       }
-   /*
-       .button1 {
-           background-color:black;
-           color:white;
-           
-}
+   <link href="Styles.css" rel="stylesheet" type="text/css" />
+   
 
-       .button1:hover {
-           background-color: #555555;
-           color: white;
-}
-       .button2 {
-           background-color:black;
-           color:white;
-           
-}
-
-       .button2:hover {
-           background-color: #555555;
-           color: white;
-}*/
-       .button3 {
-           background-color:black;
-           color:white;
-           
-}
-
-       .button3:hover {
-           background-color: #555555;
-           color: white;
-}
-   /*clase para lista de botones  */
-       .dropbtn {
-       background-color: #000000;
-       color: white;
-       padding: 16px 32px;
-       font-size: 16px;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       font-size: 16px;
-       margin: 4px 2px;
-       transition-duration: 0.7s;
-       cursor: pointer;
-       border: none;
-              
-       }
-
-       .dropdown {
-       position: relative;
-       display: inline-block;
-       
-       }
-
-       .dropdown-content {
-       display: none;
-       position: absolute;
-       background-color: #92817A;
-       min-width: 100%;
-       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-       z-index: 1;
-       opacity: 2;
-       }
-
-       .dropdown-content a {
-       color: white;
-       padding: 12px 16px;
-       text-decoration: none;
-       display: block;
-}
-
-       .dropdown-content a:hover {background-color: #ddd;}
-
-       .dropdown:hover .dropdown-content {display: block;}
-
-       .dropdown:hover .dropbtn {background-color: #92817A;}
-     
-
-   </style>
 </head>
-<body>
-    <div style="background-color:black;color:white;padding: 50px;">
-        <div style="top: 25px;position: absolute;width: 100%; text-align: center;">
+<body class="body">
+    <div class="cont1">
+        <div class="barraMenu2">
             <div class="dropdown">
                   <button class="dropbtn" >Administrador de ventas</button>
                   <div class="dropdown-content">
@@ -137,10 +20,10 @@
                   </div>
             </div>
             <div class="dropdown">
-                  <button class="dropbtn">Administrador de productos</button>
+                  <button  class="dropbtn">Administrador de productos</button>
                   <div class="dropdown-content">
-                    <a href="#">Registro</a>
-                    <a href="#">Historial de productos</a>
+                    <a href="ventana_registrar_producto.html">Registro</a>
+                    <a href="ventanaInicio.html">Historial de productos</a>
                   </div>
             </div>
             
@@ -150,13 +33,35 @@
 
         </div>
 
-        <div style="left: 35%; position: absolute; top: 185px;left: 35%;"><img src="./Iconos/visualizar50px.png" ></div>
-        <h1 style="top: 180px;position: absolute;width: 100%; text-align: center;font-family:Arial;font-weight: bold;font-size: 30px;">REGISTRO DE PRODUCTO</h1>
-    
-       
-        <div style="position: absolute;bottom: 15px;left: 20px;background-color: black;color: white;">
-            <button type="submit">Guardar</button>
-            <button type="submit">Cancelar</button>
+        <div class="iconoVisualizar"><img src="./Iconos/registrar50px.png" ></div>
+        <hr class="hrVentanaRegistrar">
+             <h1 class="h12">REGISTRO DE PRODUCTO</h1>
+        </hr>
+        <div class="posicionFormulario">    
+        
+        <form id="nuevo-producto">
+            
+            <label for="Idtxt"class="fontEncabezados">ID:</label><br>
+            <input type="text" id="Idtxt" name="Idtxt" size="30" autocomplete="off" placeholder="Ingrese el ID"><br>
+            <label for="valorUnitxt"class="fontEncabezados">VALOR UNITARIO:</label><br>
+            <input type="text" id="valorUnitxt" name="lname" autocomplete="off" placeholder="$"><br>
+            <label for="txtestado" class="fontEncabezados">ESTADO:</label><br>
+            <select  name="lname"id="txtestado"><br>
+                <option value="disponible">disponible</option>
+                <option value="no disponible">no disponible</option>
+              </select><br>
+            <label for="descriptxt" class="fontEncabezados">DESCRIPCION:</label><br>
+            <textarea id="descriptxt" name="descripcion" rows="10"cols="160" >Escribe aquí la descripcíon del producto.</textarea>
         </div>
-</body>
+        <div class="posicionBtnGuardar">
+            <button type="button" class="btnGuardar button3" id="btnGuardarProduc">Guardar</button>
+        </div>
+        <div class="posicionBtnCancelar">
+            <button class="btnCancel cancel" type="submit">Cancelar</button>
+        </div>
+      </form>
+
+      <script src="javascript.js"></script>
+      <script src="logic.js"></script>  
+     </body>   
 </html>
