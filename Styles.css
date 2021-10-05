@@ -1,9 +1,17 @@
 /*color para el backgrounnd de la aplicacion*/
 .body {
-background-color: #f1dabf;
+    background-color: #f1dabf;
+    background-image: url("./Iconos/zara-origins_62bb645a_1280x954.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+   
+    background-attachment: fixed;
+    
 }
 .barraMenu{
-    background-color:black;color:white;padding:4%;width: 100%;
+    background-color:black;
+    color:white;
+    padding:4%;
     
 }
 
@@ -332,3 +340,19 @@ color: white;
     .posicionBtnCancelar{
         left:15%;position: absolute;top: 95%;left:15%;
     }
+    @font-face{
+        font-family:"Oceania";
+        src: url("./fuente_ventana_principal/Oceania.ttf");
+     
+    }
+
+    .h1ventana{
+        top: 40%;
+        position: absolute;
+        font-family: "Oceania";
+        font-size: 100px;
+        text-align: center;
+        width: 100%;
+        
+    }
+   
