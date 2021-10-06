@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Modulo de registro de ventas</title>
+    <link href="Estilos.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Codigo/codigo.js"></script>
+</head>
+
+<body>
+    <div class="BarraSuperior">
+        <div class="ubicBoton">
+            <li>
+                <button class="boton">
+                    Administrador de ventas
+                </button>
+                <ul>
+                    <li>
+                        <button class="subBoton">
+                            <a href="registroVentas.html">
+                                Registro de ventas
+                            </a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="subBoton">
+                            <a href="historialVentas.html">
+                                Historial de ventas
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="ubicBoton">
+            <button class="boton">
+                Administrador de productos
+            </button>
+        </div>
+        <div class="ubicBoton">
+            <button class="boton">
+                <a href="rolesyEstadoLista.html">
+                    Gestion de Usuarios/Roles
+                </a>
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="BarraTitulo">
+        <img src="Imagenes/1608401.png" ; width="50px" ; height="50px">
+        HISTORIAL DE ESTADO DE VENTA
+    </div>
+        <div class="contenedorEditor1">
+            <table>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+
+                    <th>
+                        <input type="number" placeholder="Ingresar datos" required id="numeroID">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        VALOR TOTAL
+                    </th>
+
+                    <th>
+                        <input type="number" placeholder="Ingresar datos" required id="VALORTOTAL">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        IDENTIFICADOR
+                    </th>
+
+                    <th>
+                        <input type="number" placeholder="Ingresar datos" required id="IDENTIFICADOR">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        CANTIDAD
+                    </th>
+
+                    <th>
+                        <input type="number" placeholder="Ingresar datos" required id="CANTIDAD">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        PRECIO UNITARIO
+                    </th>
+
+                    <th>
+                        <input type="number" placeholder="Ingresar datos" required id="PRECIOUNITARIO">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        FECHA DE VENTA
+                    </th>
+
+                    <th>
+                        <input type="date" placeholder="Ingresar datos" required id="FECHAVENTA">
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="contenedorEditor2">
+            <table>
+                <tr>
+                    <th>
+                        DOCUMENTO DE IDENTIFICACION
+                    </th>
+
+                    <th>
+                        <input type="text" placeholder="Ingresar datos" required id="DOCIDENTIFI">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        NOMBRE DEL CLIENTE
+                    </th>
+
+                    <th>
+                        <input type="text" placeholder="Ingresar datos" required id="NOMBRECLIENTE">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        VENDEDOR ENCARGADO
+                    </th>
+
+                    <th>
+                        <input type="text" placeholder="Ingresar datos" required id="NOMVENDE">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        ESTADO DE VENTA
+                    </th>
+
+                    <th>
+                        <select id="Estado" ; class="selectorDeEstado">
+                            <option value="1">En proceso</option>
+                            <option value="2">Entregada</option>
+                            <option value="3">Cancelada</option>
+                        </select>
+                    </th>
+                </tr>
+                <button class="botonActualizar" onclick="actualizar()">
+                    ACTUALIZAR
+                </button>
+            </table>
+        </div>
+</body>
+
+</html>
