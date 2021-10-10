@@ -1,0 +1,454 @@
+html { 
+  background-color: #F1DABF;
+  background-size: cover;
+}
+
+.BarraSuperior{
+  height: 150px;
+  background: #000;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.BarraTitulo{
+  height: 150px;
+  background: #F1DABF;
+  top: 150px;
+  left: 40%;
+  right: 40%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.boton {
+  font-size: 19px;
+  padding: 16px 32px;
+  background-color: #000;
+  border: none;
+  color: white;
+  font-family:sans-serif;
+  height: 150px;
+  width: 200px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  display: inline-block;
+}
+
+.subBoton {
+  font-size: 19px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: gray;
+  font-family:sans-serif;
+  height: 60px;
+  width: 200px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.subBoton:hover {
+  background-color: rgba(127,127,127, 0.8);
+  color: white;
+  text-shadow: 1px 1px 6px #fff;
+  transition: all 0.2s ease;
+}
+
+.subBoton:active {
+  box-shadow: inset 0px 4px 16px #FFFFFF;
+  transform: translateY(1px);
+}
+
+.boton:active {
+  box-shadow: inset 0px 4px 16px #FFFFFF;
+  transform: translateY(1px);
+}
+
+.boton:hover {
+  background: #555555;
+  color: white;
+  text-shadow: 1px 1px 6px #fff;
+  transition: all 0.2s ease;
+}
+
+.ubicBoton{
+  height: 75px;
+  width: 337px;
+  background: #000;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0px;
+}
+
+.ubicBoton li ul{
+  display: none;
+  position: absolute;
+}
+
+.ubicBoton li:hover > ul{
+  display: block;
+}
+
+.contenedorEstado{
+  background: #F1DABF;
+  top: 300px;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+}
+
+table.tablaEstado{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  font-family: sans-serif;
+  background-color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+th,td.tablaEstado{
+  padding: 20px;
+}
+
+.tablaEstado thead{
+  background-color: #92817A;
+  color: white;
+}
+
+.tablaEstado tr:nth-child(even){
+  background-color: #92817A;
+}
+
+.tablaEstado tr:hover{
+  background-color: #EADCCB;
+  color: white;
+}
+
+.buscar{
+  height: 50px;
+  position:absolute;
+  padding: 5px;
+  left: 80%;
+  top:200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buscar input{
+  width: 0px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s ease;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn{
+  top:0;
+  right:0;
+  background-color: #FFF;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  line-height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buscar:hover input{
+  width: 240px;
+}
+
+.buscar input:focus{
+  width: 240px;
+}
+
+ul, ol{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedorEditor1{
+  background: #F1DABF;
+  top: 300px;
+  left: 5%;
+  right: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
+.contenedorEditor2{
+  background: #F1DABF;
+  top: 300px;
+  left: 50%;
+  right: 5%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
+.contenedorROL1{
+  background: #F1DABF;
+  top: 300px;
+  left: 10%;
+  right: 60%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
+.contenedorROL2{
+  background: #F1DABF;
+  top: 300px;
+  left: 60%;
+  right: 10%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
+.botonActualizar{
+  position: absolute;
+  font-size: 19px;
+  padding: 16px 32px;
+  background-color: #92817A;
+  border: none;
+  color: white;
+  font-family:sans-serif;
+  height: 60px;
+  width: 150px;
+  cursor: pointer;
+  display: inline-block;
+  top: 110%;
+  right: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.botonActualizar:active {
+  box-shadow: inset 0px 2px 8px #FFFFFF;
+  transform: translateY(2px);
+}
+
+
+.contenedorEditor2 input{
+  width: 200px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 19px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorEditor1 input{
+  width: 200px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 19px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorEditor2 select{
+  width: 240px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 19px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorEditor1 select{
+  width: 240px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 19px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.selectorDeEstado{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorBusqueda{
+  background: #F1DABF;
+  top: 300px;
+  left: 15%;
+  right: 15%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 19px;
+  font-family: sans-serif;
+  font-weight:lighter;
+}
+
+.linea{
+  height: 3px;
+  background-color: gray;
+  top: 280px;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+table.tablaBusqueda{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  font-family: sans-serif;
+  background-color: #F1DABF;
+  font-size: 19px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding:"0px";
+  border-spacing: 0px;
+}
+
+.contenedorDeBusqueda1{
+  height: 60px;
+  width: 400px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contenedorBusqueda input{
+  width: 250px;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 19px;
+  color: #000;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.ListaroVisualizar{
+  position:absolute;
+  left: 85%;
+  top:200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a{
+  color: white;
+  text-decoration:none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorDeEditarRol{
+  height: 40px;
+  width: 300px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
