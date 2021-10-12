@@ -1,63 +1,49 @@
-import React, { useState } from 'react';
-import { AppBar, Toolbar, Button} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-const obtenerEstilos = makeStyles(
-    (tema) => ({
-
-        barraSuperior: {
-            background: '#000',
-            height: '150px'
-        },
-        botonMenu: {
-            marginRight: tema.spacing(2),
-            height: "150px",
-            width: "200px",
-            color: "white",
-            transitionDuration: "0.4s",
-            display: "inline - block",
-            "&:hover": {
-                background: "#555555",
-                color: "white",
-                textShadow: "1px 1px 6px #fff",
-                transition: "all 0.2s ease"
-            },
-            "&:active": {
-                boxShadow: "inset 0px 4px 16px #FFFFFF",
-                transform: "translateY(1px)"
-            },
-        },
-        menuSuperior: {
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-        }
-
-    })
-);
-
-
-const ListaPrincipal = () => {
-    const estilos = obtenerEstilos();
-
+import React from 'react';
+import '../Styles/Estilos.css';
+import IconLogin from '../Assets/Iconos/user50px.png'
+const Barradenavegacion = () => {
     return (
-        <AppBar position="static" className={estilos.barraSuperior}>
-            <Toolbar className={estilos.menuSuperior}>
-                <Button position="static" className={estilos.botonMenu} component="a" href={"/"}>
-                    Administrador de ventas
-                </Button>
 
-                <Button className={estilos.botonMenu}>
-                    Administrador de productos
-                </Button>
-                <Button className={estilos.botonMenu} component="a" href={"/gestorUsuario"}>
-                    Gestion de Usuarios/Roles
-                </Button>
-            </Toolbar>
-        </AppBar>
+    <React.Fragment>
+       
+     <div className="cont1">
+        <div className="barraMenu2">
+            <div className="dropdown">
+                  <button className="dropbtn" >Administrador de ventas</button>
+                  <div className="dropdown-content">
+                    <a href="/">Registro</a>
+                    <a href="/">Historial de ventas</a>
+                  </div>
+            </div>
+            <div className ="dropdown">
+                  <button className ="dropbtn">Administrador de productos</button>
+                  <div className="dropdown-content">
+                    <a>Registro</a>
+                    <a>Historial de productos</a>
+                  </div>
+            </div>
+            
+            <button className="buttonmy button3_1">
+              <a href="/gestorUsuario">
+              Gestion de usuarios/roles
+              </a>
+              </button>
+             
+            <button className="btnMenuLogin" title="LOGIN">
+            <img src= {IconLogin}/>
+            </button>
+          
+        </div>
+        
+      </div>
+      
+           
+    </React.Fragment>
+
     )
 
 }
 
-export default ListaPrincipal
+
+
+export default Barradenavegacion;

@@ -1,6 +1,6 @@
 import './App.css';
 
-import ListaPrincipal from './componentes/ListaPrincipal';
+import Barradenavegacion from './componentes/ListaPrincipal';
 import Rutas from './componentes/Rutas';
 
 import { BrowserRouter } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-      <ListaPrincipal />
+      <Barradenavegacion />
       <Rutas />
     </BrowserRouter>
   );
