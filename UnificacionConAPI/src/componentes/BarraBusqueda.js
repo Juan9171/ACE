@@ -23,7 +23,7 @@ const BarraBusqueda = (props) => {
                     <div>
                         {errors?.identifTotal?.message}
                     </div>
-                    <button className="btn" component="a" href={"/menuBusqueda"}>
+                    <button className="btn">
                         <img src={require("../vistas/Imagenes/3665416.png").default} width="30px" height="30px" />
                     </button>
                 </form>

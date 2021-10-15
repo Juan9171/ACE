@@ -8,9 +8,13 @@ const TablaBusqueda =(props)=>{
         <div className="contenedorEstado">
         <table className="tablaEstado">
             <thead>
-                <tr>
+            <tr>
                     <td>
                         ID
+                    </td>
+
+                    <td>
+                        PRODUCTO
                     </td>
 
                     <td>
@@ -57,18 +61,23 @@ const TablaBusqueda =(props)=>{
             </thead>
             <tbody>
                 {
+                    props.ventaBuscada.length>0?
                 props.ventaBuscada.map(ventaB=>(
-                    <tr key={ventaB.id}>
+                    <tr key={ventaB.idVenta}>
                     <td>
-                        {ventaB.idProducto}
+                        {ventaB.idVenta}
                     </td>
 
                     <td>
-                        {ventaB.valor}
+                        {ventaB.idProducto_FK}
                     </td>
 
                     <td>
-                        {ventaB.identificadorTotal}
+                        {ventaB.valor_total}
+                    </td>
+
+                    <td>
+                        {ventaB.identificador}
                     </td>
 
                     <td>
@@ -76,48 +85,46 @@ const TablaBusqueda =(props)=>{
                     </td>
 
                     <td>
-                        {ventaB.precioUnitario}
+                        {ventaB.precio}
                     </td>
 
                     <td>
-                        {ventaB.fechaDeVenta}
+                        {ventaB.fecha}
                     </td>
 
                     <td>
-                        {ventaB.documentoDeID}
+                        {ventaB.docu_cliente}
                     </td>
 
                     <td>
-                        {ventaB.nombreCliente}
+                        {ventaB.nom_cliente}
                     </td>
 
                     <td>
-                        {ventaB.NombreVendedor}
+                        {ventaB.vendedor}
                     </td>
 
                     <td>
-                        {ventaB.estadoDeLaVenta}
+                        {ventaB.estado}
                     </td>
 
                     <td>
                         <button 
-                        onClick={()=>{
-                            props.editRow(ventaB)
-                            props.recargarTabla()
-                            }}>
+                        onClick={()=>{props.editRow(ventaB)}}>
                             ACTUALIZAR
                         </button>
                         <button
-                            onClick={()=>{
-                                props.deleteUser(ventaB.id)
-                                props.recargarTabla()
-                            }}
+                            onClick={()=>{props.deleteUser(ventaB.idVenta)}}
                         >
                             ELIMINAR
                         </button>
                     </td>
                 </tr>
-                ))
+                )):(
+                    <tr>
+                        <td colSpan={3}>No se encontro la venta con el id especificado</td>
+                    </tr>
+                )
                 }
             </tbody>
         </table>

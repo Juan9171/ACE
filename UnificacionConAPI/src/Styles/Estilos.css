@@ -560,7 +560,7 @@ a{
   }
 
   .editarRol {
-    height: 50px;
+    height: 100px;
     background: white;
     color: white;
     top: 230px;
@@ -587,6 +587,7 @@ a{
     width: 150px;
     text-align: center;
     height: 25px;
+    color: #000;
   }
   .botonRol{
     font-size: 19px;
@@ -605,7 +606,11 @@ a{
 
   }
 
-
+  .botonVolverAtrasBusquedaVenta{
+    right: 25%;
+    top: 93%;
+    position: absolute;
+  }
 
 
 

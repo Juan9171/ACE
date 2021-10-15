@@ -14,6 +14,10 @@ const TablaVentas =(props)=>{
                     </td>
 
                     <td>
+                        PRODUCTO
+                    </td>
+
+                    <td>
                         VALOR
                     </td>
 
@@ -59,17 +63,21 @@ const TablaVentas =(props)=>{
                 {
                 props.users.length>0?
                 props.users.map(user=>(
-                    <tr key={user.id}>
+                    <tr key={user.idVenta}>
                     <td>
-                        {user.id}
+                        {user.idVenta}
                     </td>
 
                     <td>
-                        {user.valor}
+                        {user.idProducto_FK}
                     </td>
 
                     <td>
-                        {user.identificadorTotal}
+                        {user.valor_total}
+                    </td>
+
+                    <td>
+                        {user.identificador}
                     </td>
 
                     <td>
@@ -77,27 +85,27 @@ const TablaVentas =(props)=>{
                     </td>
 
                     <td>
-                        {user.precioUnitario}
+                        {user.precio}
                     </td>
 
                     <td>
-                        {user.fechaDeVenta}
+                        {user.fecha}
                     </td>
 
                     <td>
-                        {user.documentoDeID}
+                        {user.docu_cliente}
                     </td>
 
                     <td>
-                        {user.nombreCliente}
+                        {user.nom_cliente}
                     </td>
 
                     <td>
-                        {user.NombreVendedor}
+                        {user.vendedor}
                     </td>
 
                     <td>
-                        {user.estadoDeLaVenta}
+                        {user.estado}
                     </td>
 
                     <td>
@@ -106,7 +114,7 @@ const TablaVentas =(props)=>{
                             ACTUALIZAR
                         </button>
                         <button
-                            onClick={()=>{props.deleteUser(user.id)}}
+                            onClick={()=>{props.deleteUser(user.idVenta)}}
                         >
                             ELIMINAR
                         </button>

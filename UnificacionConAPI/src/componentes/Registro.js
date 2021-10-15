@@ -8,7 +8,7 @@ const Registro = (props) => {
 
     const onSubmit = (data,e) => {
         //console.log(data)
-        props.addUser(data)
+        props.addUser(data,e)
         e.target.reset()
     }
 
@@ -24,7 +24,7 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <input type="number" placeholder="Ingresar datos" {...register("valor" ,{
+                                    <input type="number" placeholder="Ingresar datos" {...register("valor_total" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -39,7 +39,7 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <input type="number" placeholder="Ingresar datos" {...register("identificadorTotal" ,{
+                                    <input type="number" placeholder="Ingresar datos" {...register("identificador" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -65,11 +65,29 @@ const Registro = (props) => {
                             </tr>
                             <tr>
                                 <th>
+                                    PRODUCTO
+                                </th>
+
+                                <th>
+                                    <select className="selectorDeProducto" {...register("idProducto_FK")}>
+                                        {props.productos.map(producto=>(
+                                        <option key={producto.idProducto} value={producto.idProducto}>{producto.descripcion}</option>
+                                        ))
+                                        }
+                                    </select>
+                                    <div>
+                                        {errors?.estadoDeLaVenta?.message}
+                                    </div>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>
                                     PRECIO UNITARIO
                                 </th>
 
                                 <th>
-                                    <input type="number" placeholder="Ingresar datos" {...register("precioUnitario" ,{
+                                    <input type="number" placeholder="Ingresar datos" {...register("precio" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -84,7 +102,7 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <input type="date" placeholder="Ingresar datos" {...register("fechaDeVenta" ,{
+                                    <input type="text" placeholder="Ingresar datos" {...register("fecha" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -105,7 +123,7 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <input type="text" placeholder="Ingresar datos" {...register("documentoDeID" ,{
+                                    <input type="text" placeholder="Ingresar datos" {...register("docu_cliente" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -120,7 +138,7 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <input type="text" placeholder="Ingresar datos" {...register("nombreCliente" ,{
+                                    <input type="text" placeholder="Ingresar datos" {...register("nom_cliente" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -135,7 +153,7 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <input type="text" placeholder="Ingresar datos" {...register("NombreVendedor" ,{
+                                    <input type="text" placeholder="Ingresar datos" {...register("vendedor" ,{
                                             required: { value: true, message: "Campo requerido" }
                                         })
                                     } />
@@ -150,20 +168,20 @@ const Registro = (props) => {
                                 </th>
 
                                 <th>
-                                    <select id="Estado" className="selectorDeEstado" {...register("estadoDeLaVenta")}>
+                                    <select className="selectorDeEstado" {...register("estado")}>
                                         <option value="En proceso">En proceso</option>
                                         <option value="Entregada">Entregada</option>
                                         <option value="Cancelada">Cancelada</option>
                                     </select>
                                     <div>
-                                        {errors?.estado?.message}
+                                        {errors?.estadoDeLaVenta?.message}
                                     </div>
                                 </th>
                             </tr>
                         </tbody>
                     </table>
                     <button className="botonActualizar" component="a" href={"/"}>
-                        GUARDAR
+                        Agregar
                     </button>
                 </div>
             </form>
