@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import EditarRol from '../componentes/EditarRol';
 import TablaRoles from '../componentes/TablaRoles';
 import '../Styles/Estilos.css';
+
+
 
 var Usuario = function (id, nombre, apellido, rolU, estadoU) {
     this.idUsuario = id;
@@ -36,9 +38,9 @@ const Gestor = () => {
                 setEstadoListado(false);
             });
     }
-    if (estadoListado) {
-        obtenerUsuarios();
-    }
+    // if (estadoListado) {
+    //     obtenerUsuarios();
+    // }
     const [currentUsuario, setCurrentUsuario] = useState({
         nombres: "", apellidos: "", rolU: "", estadoU: ""
     })
@@ -57,6 +59,9 @@ const Gestor = () => {
         setUsuarios(usuarios.map(usuario => (usuario.id == id ? updatedUsuario : usuario)))
     }
 
+    useEffect(() => {
+        obtenerUsuarios();
+      }, []);
     return (
         <div>
             <div className="editarRoles">

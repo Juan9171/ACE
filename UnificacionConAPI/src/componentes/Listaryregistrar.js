@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../Styles/EstilosInicio.css';
 import ProductoTabla from './ProductoListado';
 import Formularioregistro from './Registrarproductos';
@@ -21,6 +21,7 @@ const Listaryregistrar = () => {
 
   const [users, setUsers] = useState([]);
   const [estadoListado, setEstadoListado] = useState(true);
+  console.log(users)
 
   const obtenerProductos = () => {
     fetch("http://localhost:3010/producto", { method: "get" })
@@ -39,9 +40,9 @@ const Listaryregistrar = () => {
         setEstadoListado(false);
       });
   }
-  if (estadoListado) {
-    obtenerProductos();
-  }
+  // if (estadoListado) {
+  //   obtenerProductos();
+  // }
 
   //Agregar Usuario
   const addUser = (user, e) => {
@@ -109,6 +110,10 @@ const Listaryregistrar = () => {
   const recargarTabla = () => {
     setMostrarBusqueda(false)
   }
+
+  useEffect(() => {
+    obtenerProductos();
+  }, []);
 
   return (
     <div className="bodyGeneral">
