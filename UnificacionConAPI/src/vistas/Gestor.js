@@ -5,10 +5,9 @@ import '../Styles/Estilos.css';
 
 
 
-var Usuario = function (id, nombre, apellido, rolU, estadoU) {
+var Usuario = function (id, nombre, rolU, estadoU) {
     this.idUsuario = id;
     this.nombres = nombre;
-    this.apellidos = apellido;
     this.rolU = rolU;
     this.estadoU = estadoU;
 }
@@ -29,7 +28,6 @@ const Gestor = () => {
                     usuariosData.push(new Usuario(
                         item.idUsuario,
                         item.nombres,
-                        item.apellidos,
                         item.rolU,
                         item.estadoU
                     ));
@@ -42,14 +40,14 @@ const Gestor = () => {
     //     obtenerUsuarios();
     // }
     const [currentUsuario, setCurrentUsuario] = useState({
-        nombres: "", apellidos: "", rolU: "", estadoU: ""
+        nombres: "", rolU: "", estadoU: ""
     })
 
     const editRow = (usuario) => {
 
         setEditing(true)
         setCurrentUsuario({
-            idUsuario: usuario.idUsuario, nombres: usuario.nombres, apellidos: usuario.apellidos, rolU: usuario.rolU, estadoU: usuario.estadoU
+            idUsuario: usuario.idUsuario, nombres: usuario.nombres, rolU: usuario.rolU, estadoU: usuario.estadoU
         })
     }
 

@@ -8,7 +8,6 @@ var Usuario = function (usuario) {
 
     this.idUsuario = usuario.idUsuario;
     this.nombres = usuario.nombres;
-    this.apellidos = usuario.apellidos;
     this.rolU=usuario.rolU;
     this.estadoU=usuario.estadoU;
 }
@@ -53,8 +52,8 @@ Usuario. listar = (resultado) => {
 
 Usuario.actualizar = (usuario, resultado) => {
 
-    sql.query('CALL spActualizarUsuario(?,?,?,?,?);', 
-    [usuario.idUsuario, usuario.nombres, usuario.apellidos,usuario.rolU, usuario.estadoU] ,
+    sql.query('CALL spActualizarUsuario(?,?,?,?);', 
+    [usuario.idUsuario, usuario.nombres, usuario.rolU, usuario.estadoU] ,
     (err, res) => {
         //Verificar si hubo error ejecutando la consulta
         if (err) {

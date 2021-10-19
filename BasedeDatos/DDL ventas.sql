@@ -16,7 +16,6 @@ CREATE TABLE Rol (
 CREATE TABLE Usuarios (	
    idUsuario INT NOT NULL AUTO_INCREMENT,
    nombres VARCHAR(50) NOT NULL,
-   apellidos VARCHAR(50) NOT NULL,
    rolU INT NOT NULL,
 	estadoU INT NOT NULL,
 	PRIMARY KEY ( idUsuario ),

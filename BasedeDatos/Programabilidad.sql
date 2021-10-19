@@ -13,7 +13,7 @@ END//
 DELIMITER //
 CREATE PROCEDURE spListarUsuarios()
 BEGIN
-	SELECT idUsuario, nombres, apellidos, rolU, estadoU
+	SELECT idUsuario, nombres, rolU, estadoU
 		FROM Usuarios
 		ORDER BY idUsuario;
 END//
@@ -56,7 +56,6 @@ END//
 CREATE PROCEDURE spActualizarUsuario(
 IN Id int,
 IN nombres varchar(50),
-IN apellidos varchar(50),
 IN rol int,
 IN estado int
 )
@@ -64,15 +63,14 @@ BEGIN
 	IF Id<=0 THEN
 		INSERT INTO Usuarios 
 			(
-			nombres, apellidos, rolU, estadoU
+			nombres, rolU, estadoU
 			)
 			VALUES(
-			nombres, apellidos,rol,estado
+			nombres,rol,estado
 			);
 	ELSE
 		UPDATE Usuarios
 			SET	nombres=nombres,
-			apellidos=apellidos,
             rolU=rol,
             estadoU=estado
 			WHERE idUsuario =  Id;

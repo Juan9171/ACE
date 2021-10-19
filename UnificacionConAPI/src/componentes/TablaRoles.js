@@ -62,7 +62,7 @@ const TablaRoles = (props) => {
                                             {user.idUsuario}
                                         </td>
                                         <td>
-                                            {user.nombres} {user.apellidos}
+                                            {user.nombres}
                                         </td>
 
                                         <td>

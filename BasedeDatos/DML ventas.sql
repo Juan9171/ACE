@@ -10,13 +10,13 @@ INSERT INTO Rol (idRol,rol) VALUES (1, 'vendedor');
 INSERT INTO Rol (idRol,rol) VALUES (2, 'administrativo');
 INSERT INTO Rol (idRol,rol) VALUES (3, 'cliente');
 
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU) VALUES (1,'Juan', 'Rodríguez',1,2);
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU ) VALUES (2,'Juan', 'Gomez',1,1);
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU ) VALUES (3,'Camila', 'Rodríguez',2,2);
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU ) VALUES (4,'Sebastian', 'Bonilla',3,3);
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU ) VALUES (5,'Luisa', 'Gomez',1,3);
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU ) VALUES (6,'Fernando', 'Vazques',1,3);
-INSERT INTO Usuarios (idUsuario,nombres, apellidos, rolU, estadoU ) VALUES (7,'Daniela', 'Delgado',2,3);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU) VALUES (1,'Juan Rodríguez',1,2);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (2,'Juan Gomez',1,1);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (3,'Camila Rodríguez',2,2);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (4,'Sebastian Bonilla',3,3);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (5,'Luisa Gomez',1,3);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (6,'Fernando Vazques',1,3);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (7,'Daniela Delgado',2,3);
 
 
 
