@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../Assets/Imagenes/Background.jpg) no-repeat left top;
+    background-size: cover;
+    font-family: sans-serif;
+    background-attachment: fixed;
+  }
+  
+  .contenedor {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241, 218, 191, 0.8);
+    color: #FFFBFF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    
+  }
+  
+  .login-box {
+    width: 320px;
+    height: 420px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000500;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    backdrop-filter: blur(1px) ;
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+  }
+  
+  .login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;    
+    left: calc(50% - 50px);
+    }
+  
+  .login-box h1 {
+    margin: 0;
+    padding: 50px 0 10px;
+    text-align: center;
+    font-size: 19px;
+  }
+  
+  .login-box label {
+    margin: 0;
+    padding: 0 0 5px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+  
+  .login-box input[type="text"], .login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #000500;
+    background: #FFFBFF;
+    outline: none;
+    height: 40px;
+    color: #000500;
+    font-size: 19px;
+  }
+  
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #92817A;
+    color: #FFFBFF;
+    font-size: 19px;
+    border-radius: 20px;
+  }
+  
+  .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #F1DABF;
+    color: #000500;
+  }
+  
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 10px;
+    color: #000500;
+  }
+  
+  .login-box a:hover {
+    color: #F1DABF;
+  }
+  
+  
+  @media only screen and (max-width: 540px){
+    .body, .contenedor{
+      display: block;
+    }
+  }
