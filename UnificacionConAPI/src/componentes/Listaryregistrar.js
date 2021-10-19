@@ -101,11 +101,16 @@ const Listaryregistrar = () => {
   const [mostrarBusqueda, setMostrarBusqueda] = useState(false)
   const searchUser = (id) => {
     var a = users.filter(user => user.idProducto == id)
-    setVentaBuscada(a)
+    var b = users.filter(user => user.descripcion == id)
 
     if (a.length > 0) {
-      setMostrarBusqueda(true)
+      setVentaBuscada(a)      
+    }else if (b.length > 0) {
+      setVentaBuscada(b)
+    }else{
+      setVentaBuscada({})
     }
+    setMostrarBusqueda(true)
   }
   const recargarTabla = () => {
     setMostrarBusqueda(false)

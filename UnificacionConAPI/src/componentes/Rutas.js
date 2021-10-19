@@ -19,7 +19,7 @@ const Rutas = () => {
             {/* Modulo gestor de ventas y roles */}
             <Route exact path='/iniciomoduloventas' component={InicioVentas} />
             <Route exact path='/gestorUsuario' component={Gestor} />
-            <Route exact path='/listaryregistrar'/>
+            <Route exact path='/listaryregistrar'component={Listaryregistrar}/>
             
             
             <Route exact path='/inicio' component={InicioVentana}>

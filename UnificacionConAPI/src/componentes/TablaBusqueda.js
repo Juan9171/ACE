@@ -122,7 +122,7 @@ const TablaBusqueda =(props)=>{
                 </tr>
                 )):(
                     <tr>
-                        <td colSpan={3}>No se encontro la venta con el id especificado</td>
+                        <td colSpan={3}>No se encontro la venta</td>
                     </tr>
                 )
                 }

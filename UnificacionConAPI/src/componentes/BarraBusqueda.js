@@ -16,7 +16,7 @@ const BarraBusqueda = (props) => {
         <div>
             <div className="buscar">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="inputBuscar" type="number" placeholder="Buscar por ID" required {...register("busqueda", {
+                    <input className="inputBuscar" type="text" placeholder="Buscar por ID" required {...register("busqueda", {
                         required: { value: true, message: "Campo requerido" }
                     })
                     } />
