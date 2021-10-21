@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import EditProduct from './Editproduct';
 import BarradeBusqueda from './Barradebusqueda';
 import TablaBusquedadeProducto from './TablaBusquedaProducto';
+import Barradenavegacion from './ListaPrincipal';
 
 
 var Producto = function (id, valor, estado, descripcion) {
@@ -121,8 +122,10 @@ const Listaryregistrar = () => {
   }, []);
 
   return (
+    <React.Fragment>
+    <Barradenavegacion />
     <div className="bodyGeneral">
-
+      
       <div className="container ">
 
         <div className="flex-row ">
@@ -162,6 +165,7 @@ const Listaryregistrar = () => {
       </div>
       <BarradeBusqueda searchUser={searchUser} />
     </div>
+    </React.Fragment>
   )
 }
 export default Listaryregistrar

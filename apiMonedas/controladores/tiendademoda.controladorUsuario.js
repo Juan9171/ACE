@@ -23,6 +23,27 @@ exports.obtener = (req, res) => {
 }
 
 
+exports.buscar = (req, res) => {
+    Usuario.buscar(req.params.name, (err, data) => {
+        //verificar si no hubo error
+        if (err) {
+            if (err.tipo == "No encontrado") {
+                res.status(404).send({ message: `No se encontro usuario con el nombre ${req.params.name}` });
+            }
+            else {
+                res.status(500).send({ message: `Error obteniendo el usuario con el nombre ${req.params.name}` });
+            }
+        }
+        else {
+            //Se devuelve el registro obtenido
+            res.send(data);
+        }
+
+    });
+
+}
+
+
 exports.listar = (req, res) => {
     Usuario.listar((err, data) => {
         //verificar si no hubo error

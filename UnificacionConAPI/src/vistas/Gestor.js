@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import EditarRol from '../componentes/EditarRol';
+import Barradenavegacion from '../componentes/ListaPrincipal';
 import TablaRoles from '../componentes/TablaRoles';
 import '../Styles/Estilos.css';
 
 
 
-var Usuario = function (id, nombre, rolU, estadoU) {
+var Usuario = function (id, nombre, apellido, rolU, estadoU) {
     this.idUsuario = id;
     this.nombres = nombre;
+    this.apellidos = apellido;
     this.rolU = rolU;
     this.estadoU = estadoU;
 }
@@ -28,6 +30,7 @@ const Gestor = () => {
                     usuariosData.push(new Usuario(
                         item.idUsuario,
                         item.nombres,
+                        item.apellidos,
                         item.rolU,
                         item.estadoU
                     ));
@@ -40,14 +43,14 @@ const Gestor = () => {
     //     obtenerUsuarios();
     // }
     const [currentUsuario, setCurrentUsuario] = useState({
-        nombres: "", rolU: "", estadoU: ""
+        nombres: "", apellidos: "", rolU: "", estadoU: ""
     })
 
     const editRow = (usuario) => {
 
         setEditing(true)
         setCurrentUsuario({
-            idUsuario: usuario.idUsuario, nombres: usuario.nombres, rolU: usuario.rolU, estadoU: usuario.estadoU
+            idUsuario: usuario.idUsuario, nombres: usuario.nombres, apellidos: usuario.apellidos, rolU: usuario.rolU, estadoU: usuario.estadoU
         })
     }
 
@@ -61,6 +64,8 @@ const Gestor = () => {
         obtenerUsuarios();
       }, []);
     return (
+        <React.Fragment>
+    <Barradenavegacion />
         <div>
             <div className="editarRoles">
                 <img src={require("./Imagenes/1608401.png").default} width="50px" height="50px" title="Editar y actualizar" />
@@ -86,6 +91,7 @@ const Gestor = () => {
 
             <TablaRoles usuarios={usuarios} editRow={editRow} />
         </div>
+        </React.Fragment>
     );
 }
 

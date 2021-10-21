@@ -1,4 +1,5 @@
 //Cargar la libreria con la conexion a la bd
+const { query } = require('express');
 var sql = require('./bd');
 
 //constructor
@@ -15,6 +16,28 @@ var Usuario = function (usuario) {
 Usuario.obtener = (idUsuario, resultado) => {
 
     sql.query(`Select * from Usuarios where idUsuario=${idUsuario};`, (err, res) => {
+        //Verificar si hubo error ejecutando la consulta
+        if (err) {
+            console.log("Error consultando el usuario:", err);
+            resultado(err, null);
+            return;
+        }
+        //La consulta devuelve resultados
+        if (res.length) {
+            console.log("Usuario encontrado", res[0]);
+            resultado(null, res[0]);
+            return;
+        }
+        //No se encontraron registros
+        resultado({ tipo: "No encontrado" }, null);
+    });
+
+}
+
+Usuario.buscar = (nombres, resultado) => {
+ var sqlquery=`Select * from usuarios where nombres='${nombres}';`
+ console.log(sqlquery);
+    sql.query(sqlquery, (err, res) => {
         //Verificar si hubo error ejecutando la consulta
         if (err) {
             console.log("Error consultando el usuario:", err);

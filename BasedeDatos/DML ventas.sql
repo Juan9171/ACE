@@ -2,7 +2,7 @@ INSERT INTO Estado (idestado,estado) VALUES (1, 'pediente');
 #INSERT INTO Estado (idestado,estado,idUsuario_FK ) VALUES (1, 'pediente',2);
 INSERT INTO Estado (idestado,estado) VALUES (2, 'aceptado');
 #INSERT INTO Estado (idestado,estado,idUsuario_FK ) VALUES (2, 'aceptado',4);
-INSERT INTO Estado (idestado,estado) VALUES (3, 'aceptado');
+INSERT INTO Estado (idestado,estado) VALUES (3, 'no aceptado');
 #INSERT INTO Estado (idestado,estado,idUsuario_FK ) VALUES (3, 'no aceptado',6);
 #INSERT INTO Estado (idestado,estado,idUsuario_FK ) VALUES (2, 'aceptado',7);
 
@@ -13,7 +13,7 @@ INSERT INTO Rol (idRol,rol) VALUES (3, 'cliente');
 INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU) VALUES (1,'Juan Rodríguez',1,2);
 INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (2,'Juan Gomez',1,1);
 INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (3,'Camila Rodríguez',2,2);
-INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (4,'Sebastian Bonilla',3,3);
+INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (4,'Sebastian Bonilla',2,3);
 INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (5,'Luisa Gomez',1,3);
 INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (6,'Fernando Vazques',1,3);
 INSERT INTO Usuarios (idUsuario,nombres, rolU, estadoU ) VALUES (7,'Daniela Delgado',2,3);

@@ -1,6 +1,8 @@
 const express=require('express');
+const cors=require('cors');
 const app = express();
 const puerto=3010;
+app.use(cors());
 
 app.get('/',(req, res)=>{
 

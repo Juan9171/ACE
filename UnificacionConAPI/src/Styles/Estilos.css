@@ -3,6 +3,12 @@ html {
   background-size: cover;
 }
 
+.btnMenuLogin{
+  right:0%;
+  position:absolute;
+  top:1%;
+}
+
 .BarraSuperior{
   height: 150px;
   background: #000;

@@ -9,6 +9,7 @@ const EditarRol = (props) => {
     });
 
     setValue("nombres", props.currentUsuario.nombres)
+    setValue("apellidos", props.currentUsuario.apellidos)
     setValue("rolU", props.currentUsuario.rolU)
     setValue("estadoU", props.currentUsuario.estadoU)
 
@@ -26,6 +27,7 @@ const EditarRol = (props) => {
                 body: JSON.stringify({
                     idUsuario: data.idUsuario,
                     nombres: data.nombres,
+                    apellidos: data.apellidos,
                     rolU: data.rolU,
                     estadoU: data.estadoU
                 })                 
@@ -49,7 +51,10 @@ const EditarRol = (props) => {
                         required: { value: true, message: "Campo requerido" }
                     })}
                     />
-
+                    <input type="text" {...register("apellidos", {
+                        required: { value: true, message: "Campo requerido" }
+                    })}
+                    />
                     <div>
                         {errors?.nombre?.message}
                     </div>
