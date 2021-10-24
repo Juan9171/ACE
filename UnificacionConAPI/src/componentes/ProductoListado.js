@@ -21,7 +21,7 @@ const ProductoTabla = (props) => {
     {/* TABLA   */}    
     <table className="table" >
         <thead>
-            <tr className="tr">
+            <tr>
             <th className="th">Identificador unico de venta</th>
             <th className="th">Valor Unitario</th>
             <th className="th">Estado</th>

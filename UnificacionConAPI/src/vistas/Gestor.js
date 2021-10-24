@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EditarRol from '../componentes/EditarRol';
+import Barradenavegacion from '../componentes/ListaPrincipal';
 import TablaRoles from '../componentes/TablaRoles';
 import '../Styles/Estilos.css';
 
@@ -63,6 +64,8 @@ const Gestor = () => {
         obtenerUsuarios();
       }, []);
     return (
+        <React.Fragment>
+    <Barradenavegacion />
         <div>
             <div className="editarRoles">
                 <img src={require("./Imagenes/1608401.png").default} width="50px" height="50px" title="Editar y actualizar" />
@@ -88,6 +91,7 @@ const Gestor = () => {
 
             <TablaRoles usuarios={usuarios} editRow={editRow} />
         </div>
+        </React.Fragment>
     );
 }
 

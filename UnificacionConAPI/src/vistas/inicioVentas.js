@@ -6,6 +6,7 @@ import TablaVentas from '../componentes/TablaVentas';
 import Editar from '../componentes/Editar';
 import BarraBusqueda from '../componentes/BarraBusqueda';
 import TablaBusqueda from '../componentes/TablaBusqueda';
+import Barradenavegacion from '../componentes/ListaPrincipal';
 
 var Venta = function (idVenta, idProducto_FK, valor_total, identificador, cantidad,fecha, precio, docu_cliente, nom_cliente, vendedor,estado) {
     this.idVenta = idVenta;
@@ -108,12 +109,21 @@ const InicioVentas = () => {
 
       const[ventaBuscada, setVentaBuscada]=useState({})
       const[mostrarBusqueda, setMostrarBusqueda]=useState(false)
-      const searchUser =(id) =>{
+      const searchUser = (id) => {
         var a = users.filter(user => user.idVenta == id)
-        setVentaBuscada(a)
-        if (a.length>0){
-            setMostrarBusqueda(true)
-        }        
+        var b = users.filter(user => user.nom_cliente == id)
+        var c = users.filter(user => user.docu_cliente == id)
+    
+        if (a.length > 0) {
+          setVentaBuscada(a)      
+        }else if (b.length > 0) {
+          setVentaBuscada(b)
+        }else if (c.length > 0) {
+          setVentaBuscada(c)
+        }else{
+          setVentaBuscada({})
+        }
+        setMostrarBusqueda(true)
       }
       const recargarTabla = ()=>{
         setMostrarBusqueda(false)
@@ -153,6 +163,8 @@ const InicioVentas = () => {
       }, []);
 
     return (
+      <React.Fragment>
+         <Barradenavegacion />
         <div>
 
             {
@@ -194,6 +206,7 @@ const InicioVentas = () => {
                 )
         }          
         </div >
+        </React.Fragment>
     );
 }
 

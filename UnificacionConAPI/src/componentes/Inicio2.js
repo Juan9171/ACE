@@ -8,7 +8,9 @@ const Inicio = () => {
 
     <React.Fragment>
          <Barradenavegacion />
-         <h1 className="h1ventana  body1">Nombre de la empresa</h1> 
+         <div className="body1">
+         <h1 className="h1ventana">ACE S.A.S.</h1>
+         </div>
     
     </React.Fragment>
 

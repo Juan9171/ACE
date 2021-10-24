@@ -6,11 +6,11 @@ const TablaRoles = (props) => {
     const definirEstado = (idestado) => {
         switch (idestado) {
             case 1:
-                return("Autorizado")
-            case 2:
-                return("No autorizado")
-            case 3:
                 return("Pendiente")
+            case 2:
+                return("Aceptado")
+            case 3:
+                return("No aceptado")
             default:
                 break;
         }
@@ -18,10 +18,8 @@ const TablaRoles = (props) => {
     const definirRol = (idrol) => {
         switch (idrol) {
             case 1:
-                return("Cliente")
-            case 2:
                 return("Vendedor")
-            case 3:
+            case 2:
                 return("Administrador")
             default:
                 break;
