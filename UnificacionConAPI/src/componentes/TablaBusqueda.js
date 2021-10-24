@@ -8,52 +8,52 @@ const TablaBusqueda =(props)=>{
         <div className="contenedorEstado">
         <table className="tablaEstado">
             <thead>
-            <tr>
-                    <td>
+            <tr className="tr">
+                    <td className="td">
                         ID
                     </td>
 
-                    <td>
+                    <td className="td">
                         PRODUCTO
                     </td>
 
-                    <td>
+                    <td className="td">
                         VALOR
                     </td>
 
-                    <td>
+                    <td className="td">
                         IDENTIFICADOR TOTAL
                     </td>
 
-                    <td>
+                    <td className="td">
                         CANTIDAD
                     </td>
 
-                    <td>
+                    <td className="td">
                         PRECIO UNITARIO
                     </td>
 
-                    <td>
+                    <td className="td">
                         FECHA DE VENTA
                     </td>
 
-                    <td>
+                    <td className="td">
                         DOCUMENTO DE IDENTIFICACION
                     </td>
 
-                    <td>
+                    <td className="td">
                         NOMBRE DEL CLIENTE
                     </td>
 
-                    <td>
+                    <td className="td">
                         NOMBRE DEL VENDEDOR
                     </td>
 
-                    <td>
+                    <td className="td">
                         ESTADO DE LA VENTA
                     </td>
 
-                    <td>
+                    <td className="td">
                         ACCION
                     </td>
 
@@ -63,52 +63,52 @@ const TablaBusqueda =(props)=>{
                 {
                     props.ventaBuscada.length>0?
                 props.ventaBuscada.map(ventaB=>(
-                    <tr key={ventaB.idVenta}>
-                    <td>
+                    <tr className="tr" key={ventaB.idVenta}>
+                    <td className="td">
                         {ventaB.idVenta}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.idProducto_FK}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.valor_total}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.identificador}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.cantidad}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.precio}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.fecha}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.docu_cliente}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.nom_cliente}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.vendedor}
                     </td>
 
-                    <td>
+                    <td className="td">
                         {ventaB.estado}
                     </td>
 
-                    <td>
+                    <td className="td">
                         <button 
                         onClick={()=>{props.editRow(ventaB)}}>
                             ACTUALIZAR
@@ -121,7 +121,7 @@ const TablaBusqueda =(props)=>{
                     </td>
                 </tr>
                 )):(
-                    <tr>
+                    <tr className="tr">
                         <td colSpan={3}>No se encontro la venta con el id especificado</td>
                     </tr>
                 )

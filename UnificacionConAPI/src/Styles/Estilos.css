@@ -149,11 +149,29 @@ table.tablaEstado{
   cursor: pointer;
   font-size: 19px;
   font-weight: bold;
+
+}
+.mensajeLog{
+  text-align: center;
+  position: relative;
 }
 
-th,td.tablaEstado{
+.tr{
+  text-align: center;
+  padding: 12px;
+  font-size: 19px;
+  font-family: sans-serif;  
+  padding: 12px;
+}
+
+.td{
+  text-align: left;
+  padding: 8px;
+  font-family: Arial;
+  font-size: 15px;
   text-align: center;
 }
+
 
 .tablaEstado thead{
   background-color: #92817A;
@@ -452,8 +470,45 @@ table.tablaBusqueda{
   justify-content: space-evenly;
   align-items: center;
 }
+.avatar{
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 7%;
+    left: 105%;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+.avatar:hover{
+  background-color: #92817A;
+}
 
-a{
+.avatar2{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30%;    
+  left: 99%;
+}
+
+.la{
+  color: white;
+  text-decoration:none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.la:hover{
   color: white;
   text-decoration:none;
   display: flex;

@@ -104,6 +104,9 @@ const Formulario = () => {
     const cookie = new Cookies();
     cookie.set('rol',rol,{path:'/'})
     cookie.set('names',name,{path:'/'})
+    cookie.set('imageUrl',imageUrl,{path:'/'})
+    cookie.set('isLoggedIn',isLoggedIn,{path:'/'})
+    
     
 
     const onFailure = () => {
@@ -178,9 +181,11 @@ const Formulario = () => {
                             </div>
                             <h1>{name} </h1>
                             <h1>{email}</h1>
-                            <input type="submit" value="cerrar sesion" id='Boton' onClick={logOut} />
+                            <input type="submit" value="Cerrar sesión" id='Boton' onClick={logOut} />
                             {mostrarBotonIngresar ? (
+                                <div className="ingresare">
                                 <a href="/inicio">Ingresar</a>
+                                </div>
                             ) : (
                                 <div>La persona no está autorizada</div>
                             )

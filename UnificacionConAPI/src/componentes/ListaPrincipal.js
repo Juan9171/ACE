@@ -10,6 +10,7 @@ const cookies = new Cookies();
 const Barradenavegacion = () => {
   const rol = cookies.get('rol');
   const names = cookies.get('names');
+  const imageUrl = cookies.get('imageUrl');
 
   const obtenerRol = () => {
     if (rol == 1) {
@@ -58,22 +59,27 @@ const Barradenavegacion = () => {
           <div className="cont1">
             <div className="barraMenu2">
               <div className="dropdown">
-                <button className="dropbtn"> <a href="/iniciomoduloventas">Administrador de ventas</a></button>
+                <button className="dropbtn"> <a className="la" href="/iniciomoduloventas">Administrador de ventas</a></button>
               </div>
               <div className="dropdown">
-                <button className="dropbtn"><a href="/listaryregistrar">Administrador de productos</a></button>
+                <button className="dropbtn"><a className="la" href="/listaryregistrar">Administrador de productos</a></button>
 
               </div>
 
-              <button className="buttonmy button3_1">
-                <a href="/gestorUsuario">
+              <div className="dropdown">
+              <button className="dropbtn">
+                <a className="la" href="/gestorUsuario">
                   Gestion de usuarios/roles
                 </a>
               </button>
+              </div>
 
-              <button className="btnMenuLogin" title="LOGIN">
-                <img src={IconLogin} />
+              <button className="avatar" title="LOGIN">
+                <a className="la" href="/">
+                  SALIR
+                </a>
               </button>
+              <img className="avatar2" src={imageUrl}/>
               <div>
                 <li>{names}</li>
                 <li>{obtenerRol()}</li>
