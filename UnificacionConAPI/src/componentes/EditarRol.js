@@ -17,7 +17,7 @@ const EditarRol = (props) => {
     const onSubmit = (data, e) => {
         data.idUsuario=props.currentUsuario.idUsuario
 
-        fetch("http://localhost:3010/usuario",
+        fetch("https://glacial-coast-96641.herokuapp.com/usuario",
             {
                 method: 'post',
                 headers: {

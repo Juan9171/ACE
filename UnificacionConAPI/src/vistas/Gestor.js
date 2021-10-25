@@ -22,7 +22,7 @@ const Gestor = () => {
     const [estadoListado, setEstadoListado] = useState(true);
 
     const obtenerUsuarios = () => {
-        fetch("http://localhost:3010/usuario", { method: "get" })
+        fetch("https://glacial-coast-96641.herokuapp.com/usuario", { method: "get" })
             .then((res) => res.json())
             .then((json) => {
                 var usuariosData = [];

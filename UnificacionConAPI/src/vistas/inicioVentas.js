@@ -35,7 +35,7 @@ const InicioVentas = () => {
 
       const addUser = (user,e) =>{
         user.idVenta = -1;
-        fetch("http://localhost:3010/venta",
+        fetch("https://glacial-coast-96641.herokuapp.com/venta",
           {
             method: 'post',
             headers: {
@@ -66,7 +66,7 @@ const InicioVentas = () => {
         ])
       }
       const obtenerVentas = () => {
-        fetch("http://localhost:3010/venta", { method: "get" })
+        fetch("https://glacial-coast-96641.herokuapp.com/venta", { method: "get" })
             .then((res) => res.json())
             .then((json) => {
                 var usuariosData = [];
@@ -89,7 +89,7 @@ const InicioVentas = () => {
             });
     }
     const obtenerProductos = () => {
-        fetch("http://localhost:3010/producto", { method: "get" })
+        fetch("https://glacial-coast-96641.herokuapp.com/producto", { method: "get" })
           .then((res) => res.json())
           .then((json) => {
             var usersData = [];

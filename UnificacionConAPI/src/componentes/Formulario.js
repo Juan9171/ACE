@@ -68,7 +68,7 @@ const Formulario = () => {
         setEmail(profile.getEmail());
         setImageUrl(profile.getImageUrl());
         try {
-            const res = await axios.get('http://localhost:3010/usuario/find/' + profile.getName());
+            const res = await axios.get('https://glacial-coast-96641.herokuapp.com/usuario/find/' + profile.getName());
             var estadoU = res.data.estadoU
             setEstado(estadoU);
             mostrarIngresar(estadoU)
@@ -81,7 +81,7 @@ const Formulario = () => {
 
                 return;
 
-            fetch('http://localhost:3010/usuario',
+            fetch('https://glacial-coast-96641.herokuapp.com/usuario',
                 {
 
 

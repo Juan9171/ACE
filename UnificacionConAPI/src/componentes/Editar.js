@@ -22,7 +22,7 @@ const Editar = (props) => {
 
     const onSubmit = (data,e) => {
         data.idVenta=props.currentUser.idVenta
-        fetch("http://localhost:3010/venta",
+        fetch("https://glacial-coast-96641.herokuapp.com/venta",
         {
             method: 'post',
             headers: {

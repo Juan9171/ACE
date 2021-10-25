@@ -25,7 +25,7 @@ const Listaryregistrar = () => {
   console.log(users)
 
   const obtenerProductos = () => {
-    fetch("http://localhost:3010/producto", { method: "get" })
+    fetch("https://glacial-coast-96641.herokuapp.com/producto", { method: "get" })
       .then((res) => res.json())
       .then((json) => {
         var usersData = [];
@@ -48,7 +48,7 @@ const Listaryregistrar = () => {
   //Agregar Usuario
   const addUser = (user, e) => {
     user.idProducto = -1;
-    fetch("http://localhost:3010/producto",
+    fetch("https://glacial-coast-96641.herokuapp.com/producto",
       {
         method: 'post',
         headers: {

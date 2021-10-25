@@ -17,7 +17,7 @@ const EditProduct = (props) =>{
     const onSubmit=(data , e )=>{
         data.idProducto=props.currentUser.idProducto                
 
-        fetch("http://localhost:3010/producto",
+        fetch("https://glacial-coast-96641.herokuapp.com/producto",
             {
                 method: 'post',
                 headers: {
